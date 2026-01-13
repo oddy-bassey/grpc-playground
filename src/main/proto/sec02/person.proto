@@ -1,6 +1,6 @@
 syntax = "proto3";
-package sec01;
-option java_package = "com.example.models.sec01";
+package sec02;
+option java_package = "com.example.models.sec02";
 
 message person {
   string name = 1;
