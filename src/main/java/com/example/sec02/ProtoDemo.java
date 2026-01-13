@@ -1,16 +1,17 @@
-package com.example.sec01;
+package com.example.sec02;
 
-import com.example.models.sec01.PersonOuterClass;
+import com.example.models.sec02.Person;
+import com.example.sec01.SimpleProtoDemo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class SimpleProtoDemo {
+public class ProtoDemo {
     private static final Logger logger = LoggerFactory.getLogger(SimpleProtoDemo.class);
 
     public static void main(String[] args) {
-        var person = PersonOuterClass.Person.newBuilder()
-                .setName("John")
-                .setAge(23)
+        Person person = Person.newBuilder()
+                .setName("Andy")
+                .setAge(12)
                 .build();
 
         logger.info("{}", person);
