@@ -3,10 +3,17 @@ package sec03;
 option java_package = "com.example.models.sec03";
 option java_multiple_files = true;
 
+enum BodyStyle {
+  SEDAN = 0;
+  COUP = 1;
+  SUV = 2;
+}
+
 message Car {
   string make = 1;
   string model = 2;
   int32 year = 3;
+  BodyStyle body_style = 4;
 }
 
 message Dealer {

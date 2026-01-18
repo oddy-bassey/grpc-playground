@@ -1,11 +1,10 @@
 package com.example.sec03;
 
+import com.example.models.sec03.BodyStyle;
 import com.example.models.sec03.Car;
 import com.example.models.sec03.Dealer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.Set;
 
 public class Lec06Map {
     private static final Logger log = LoggerFactory.getLogger(Lec06Map.class);
@@ -15,11 +14,13 @@ public class Lec06Map {
                 .setMake("Honda")
                 .setModel("civic")
                 .setYear(2000)
+                .setBodyStyle(BodyStyle.SEDAN)
                 .build();
         var car2 = Car.newBuilder()
                 .setMake("Benz")
                 .setModel("C300")
                 .setYear(2002)
+                .setBodyStyle(BodyStyle.SUV)
                 .build();
 
         var dealer = Dealer.newBuilder()
@@ -31,5 +32,6 @@ public class Lec06Map {
         log.info("2002 ? : {}", dealer.containsInventory(2002));
 
         log.info("2002 model : {}", dealer.getInventoryOrThrow(2002).getModel());
+        log.info("{}", car1);
     }
 }
