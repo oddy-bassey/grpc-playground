@@ -19,6 +19,7 @@ public class Lec01Import {
                 .setCar(car)
                 .build();
 
+        log.info("Person has age: {}", person.hasAge());
         log.info("Person has been created: {}", person);
     }
 }
